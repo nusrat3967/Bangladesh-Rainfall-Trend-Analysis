@@ -22,6 +22,9 @@ What These Numbers Tell Us?:
 -Interestingly, Sylhet has a lower Coefficient of Variation (0.13) compared to Dhaka (0.15). This suggests that while Sylhet gets more rain, it's rainfall patterns are slightly more stable and predictable than Dhaka's rainfall patterns.
 -Both regions show Positive Skewness (~0.5), indicates a trend toward occasional "extreme high-rainfall years" rather than extreme dry years.
 -The Kurtosis values for both cities are above 3 (Dhaka: 3.96, Sylhet: 3.66) which means there is a higher probability of extreme weather events (flash floods or intense rain spells).
+
+
+
 Why this matters for the Project?:
 -The descriptive statistics confirm that the dataset captures significant climatic variations which makes  it ideal for Time Series modeling.
 -The presence of High Kurtosis and Positive Skewness indicates frequent extreme rainfall events and peaks. This justifies the use of the ARIMA model, which  provides reliable long-term forecasts for Bangladesh's tropical climate.
