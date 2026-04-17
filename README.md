@@ -1,2 +1,65 @@
-# Bangladesh-Rainfall-Trend-Analysis-
-Rainfall trend analysis and 15 years forecasting by Arima model for Dhaka and Sylhet
+# Bangladesh-Rainfall-Trend-Analysis**
+45 Years of Rainfall Analysis: What 16,000+ Days of Data Reveal About Bangladesh's Climate**
+I just completed a comprehensive analysis of daily rainfall data for Rangpur and Rajshahi divisions (1981-2025) using CHIRPS satellite data. The numbers tell a fascinating story.
+📊 The Data Charecteristics at a Glance:
+Dhaka Statistics:
+ - Mean: 2083.33 mm
+ - Median: 2052.91 mm
+ - Std: 321.85 mm
+ - Skewness: 0.48
+ - Kurtosis: 3.96
+ - CV: 0.15
+
+Sylhet Statistics:
+ - Mean: 4362.02 mm
+ - Median: 4344.84 mm
+ - Std: 551.52 mm
+ - Skewness: 0.51
+ - Kurtosis: 3.66
+ - CV: 0.13
+
+What These Numbers Tell Us?:
+-Sylhet (4362 mm) receives more than double the annual rainfall of Dhaka (2083 mm), which indicates the extreme climatic difference between the two regions.
+-Interestingly, Sylhet has a lower Coefficient of Variation (0.13) compared to Dhaka (0.15). This suggests that while Sylhet gets more rain, it's rainfall patterns are slightly more stable and predictable than Dhaka's rainfall patterns.
+-Both regions show Positive Skewness (~0.5), indicates a trend toward occasional "extreme high-rainfall years" rather than extreme dry years.
+-The Kurtosis values for both cities are above 3 (Dhaka: 3.96, Sylhet: 3.66) which means there is a higher probability of extreme weather events (flash floods or intense rain spells).
+Why this matters for the Project?:
+-The descriptive statistics confirm that the dataset captures significant climatic variations which makes  it ideal for Time Series modeling.
+-The presence of High Kurtosis and Positive Skewness indicates frequent extreme rainfall events and peaks. This justifies the use of the ARIMA model, which  provides reliable long-term forecasts for Bangladesh's tropical climate.
+
+1. Rainfall Anomaly Analysis (Link:https://github.com/nusrat3967/Bangladesh-Rainfall-Trend-Analysis/blob/12b752454ecf7dbd103685a5f138216ffd9b1bf2/Bangladesh%20Rainfall%20Trend%20Analysis/Plots/rainfall%20anomally%20plot%20dhaka%20%2C%20sylhet.png)
+To understand the inter-annual variability and extreme weather events, the Standardized Anomaly Index (SAI) was calculated. This helps in identifying significant departures from the long-term mean rainfall.
+If,
+Value > 0: Above-average rainfall (Wet year).
+
+Value < 0: Below-average rainfall (Dry year).
+
+Value > 1 or < -1: Significant anomalies (Potential floods or droughts).
+
+The data shows that rainfall is not steady. Instead, both regions frequently jump between extreme floods and extreme droughts. This makes water management very difficult.In recent years, we see more "Blue Bars" (Above-average rain) grouped together. This proves that heavy rainfall events are becoming more frequent, which is a clear sign of climate change in Bangladesh
+
+2. Trend Analysis (Mann-Kendall & Sen’s Slope)( Link:https://github.com/nusrat3967/Bangladesh-Rainfall-Trend-Analysis/blob/12b752454ecf7dbd103685a5f138216ffd9b1bf2/Bangladesh%20Rainfall%20Trend%20Analysis/Plots/Rainfall%20Trend%20Plot%20Dhaka%2C%20Sylhet.png) (https://github.com/nusrat3967/Bangladesh-Rainfall-Trend-Analysis/blob/12b752454ecf7dbd103685a5f138216ffd9b1bf2/Bangladesh%20Rainfall%20Trend%20Analysis/Results/Rainfall%20Sen's%20Slope%20%20Dhaka%20Sylhet.csv)
+In case of Dhaka division,The Mann-Kendall test reveals a statistically significant upward trend in annual rainfall (p < 0.05), indicates a consistent increase in precipitation levels over the last 45 years.In contrast, Sylhet shows a non-significant or stable trend, suggesting that while it remains a high-rainfall zone, there has been no drastic mathematical shift in its annual precipitation patterns between 1981 and 2025.
+
+
+3. Model Diagnostics & Technical Validation
+Before making forecast, I tested the accuracy of the models. These tests confirm that the models are reliable and the results are not just random chance.
+What the tests show:
+Dhaka Model ( Link :https://github.com/nusrat3967/Bangladesh-Rainfall-Trend-Analysis/blob/12b752454ecf7dbd103685a5f138216ffd9b1bf2/Bangladesh%20Rainfall%20Trend%20Analysis/Plots/Residual%20Analysis%20Plot%20Dhaka.png):
+The Ljung-Box test  p-value was 0.3534. Since this is greater than 0.05, it confirms that the residuals are independent and the model has captured all patterns. 
+
+Sylhet Model ( Link :https://github.com/nusrat3967/Bangladesh-Rainfall-Trend-Analysis/blob/12b752454ecf7dbd103685a5f138216ffd9b1bf2/Bangladesh%20Rainfall%20Trend%20Analysis/Plots/Residual%20Analysis%20Plot%20Sylhet.png):
+The test showed  p-value was 0.4397. This high p-value proves that the errors are "White Noise," meaning there is no information left behind in the data.
+Both models passed the residual checks and ensure that the 15-year forecast is mathematically accurate and not based on random errors
+
+
+4. 15-Year Rainfall Forecast (2026–2040) ( Link:https://github.com/nusrat3967/Bangladesh-Rainfall-Trend-Analysis/blob/f9f386ab99cfde4259cff1afc67572aad6667724/Bangladesh%20Rainfall%20Trend%20Analysis/Plots/15%20%20years%20rain_forecast_%20upto%202040.png)
+The 15-year forecast generated by the ARIMA model predicts a stable continuation of historical rainfall patterns for both Dhaka and Sylhet up to 2040 ( Link:https://github.com/nusrat3967/Bangladesh-Rainfall-Trend-Analysis/blob/f9f386ab99cfde4259cff1afc67572aad6667724/Bangladesh%20Rainfall%20Trend%20Analysis/Results/ARIMA_15Year_Rainfall_Forecast.csv), with no drastic sudden shifts in mean precipitation levels.While the past 45 years show high year-to-year fluctuations, the 15-year forecast suggests that mean rainfall will remain consistent. However, the widening confidence bands indicate increasing uncertainty regarding future extreme weather events, such as flash floods or extreme droughts.
+The shaded regions represent the 95% confidence intervals, highlighting the potential range of future climate variability. This is a critical factor for policymakers to consider in long-term agricultural and water resource planning.
+
+Conclusion & Research Impact
+This project provides a data-driven overview of Bangladesh's changing precipitation patterns. By combining historical trend analysis with predictive modeling, it offers valuable insights for climate researchers and policymakers.
+
+Tools Used:
+Google Earth Engine (data extraction) ,R software (Packages:forecast ( ARIMA), trend & Kendall (for Mann-Kendall test), dplyr (data manipulation), and moments (descriptive statistics), Analytical Techniques: Time series modeling (ARIMA), Trend detection, Standardized Anomaly Index (SAI)
+  
