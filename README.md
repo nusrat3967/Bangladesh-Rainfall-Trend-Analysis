@@ -1,6 +1,8 @@
 # Bangladesh-Rainfall-Trend-Analysis**
 I  completed a comprehensive analysis of annual rainfall data for Dhaka and Sylhet divisions (1981-2025) using CHIRPS satellite data. The numbers tell a fascinating story.
 📊 The Data Charecteristics at a Glance:
+
+
 Dhaka Statistics:
  - Mean: 2083.33 mm
  - Median: 2052.91 mm
