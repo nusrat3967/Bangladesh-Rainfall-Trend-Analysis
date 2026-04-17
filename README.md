@@ -1,6 +1,5 @@
 # Bangladesh-Rainfall-Trend-Analysis**
-45 Years of Rainfall Analysis: What 16,000+ Days of Data Reveal About Bangladesh's Climate**
-I just completed a comprehensive analysis of daily rainfall data for Rangpur and Rajshahi divisions (1981-2025) using CHIRPS satellite data. The numbers tell a fascinating story.
+I  completed a comprehensive analysis of annual rainfall data for Dhaka and Sylhet divisions (1981-2025) using CHIRPS satellite data. The numbers tell a fascinating story.
 📊 The Data Charecteristics at a Glance:
 Dhaka Statistics:
  - Mean: 2083.33 mm
