@@ -48,10 +48,10 @@ summary_table <- rbind(
   get_summary_df(sylhet_data$mean, "Sylhet")
 )
 
-# 1. View the table in the console
+#  View the table in the console
 print(summary_table)
 
-# 2. Save as CSV file
+#  Save as CSV file
 write.csv(summary_table, "Rainfall_Summary_Statistics.csv", row.names = FALSE)
 
 cat("\nSummary Statistics saved as 'Rainfall_Summary_Statistics.csv'!\n")
@@ -82,7 +82,7 @@ print(sens_sylhet)
 
 
 # -------------------------------------------------------------------------
-# 11. Creating and Saving Trend Analysis Summary Table
+Creating and Saving Trend Analysis Summary Table
 # -------------------------------------------------------------------------
 
 
@@ -169,7 +169,7 @@ print(accuracy(model_arima_sylhet))
 forecast_dhaka_arima <- forecast(model_arima_dhaka, h = 15)
 forecast_sylhet_arima <- forecast(model_arima_sylhet, h = 15)
 
-# STEP 7: Visualization
+#  Visualization
 # -------------------------------------------------------------------------
 par(mfrow=c(1, 2), mar=c(4.5, 4.5, 3, 1.5))
 
@@ -184,7 +184,7 @@ plot(forecast_sylhet_arima, main="15-Year Rain Forecast: Sylhet",
 # Reset plot window
 par(mfrow=c(1,1))
 
-# STEP 8: Save Forecasted Values to CSV
+#  Save Forecasted Values to CSV
 # -------------------------------------------------------------------------
 arima_output <- data.frame(
   Year = 2026:2040,
