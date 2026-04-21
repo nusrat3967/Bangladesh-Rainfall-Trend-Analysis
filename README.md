@@ -19,8 +19,8 @@ Sylhet Statistics:
  - Kurtosis: 3.66
  - CV: 0.13
 
-What These Numbers Tell Us?:
-
+**What These Numbers Tell Us?:
+**
 
 
 -Sylhet (4362 mm) receives more than double the annual rainfall of Dhaka (2083 mm), which indicates the extreme climatic difference between the two regions.
@@ -34,8 +34,8 @@ What These Numbers Tell Us?:
 
 
 
-Why this matters for the Project?:
-
+**Why this matters for the Project?:
+**
 
 
 -The descriptive statistics confirm that the dataset captures significant climatic variations which makes  it ideal for Time Series modeling.
